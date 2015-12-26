@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Petri Dish - Animated Canvas Experiment</title>
+    <!--[if IE]><script src="vendor/excanvas.js"></script><![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="vendor/gyudon.min.js"></script>
+    <script src="petridish.js"></script>
+    <link rel="stylesheet" href="petridish.css">
+  </head>
+  <body>
+    <h1>Petri Dish</h1>
+    <h2>an experiment with animated canvas</h2>
+    <ul id="menu" class="js_only">
+      <li class="button"><a href="#">Patterns</a></li>
+    </ul>
+    <ul id="about">
+      <li class="button"><a href="#">About</a></li>
+      <li class="info">
+        This is a page to demonstrate <a href="http://aiham.github.io/Gyudon.js/">Gyudon.js</a>, a Javascript library that I wrote, and what it can be used to create. Gyudon.js wraps around the HTML Canvas API and allows for construction of 2D shapes on the canvas while also allowing for easy animation and manipulation of those shapes.
+      </li>
+      <li class="info">
+        Javascript must be enabled to view this page as intended. To view the different examples, just select a pattern on the left menu and either 'Wireframe' or 'Filled' from under the canvas. If you experience a problem viewing the page, do not hesitate to report it.
+      </li>
+      <li class="info">
+        I've added this demonstration to <a href="https://github.com/aiham/petridish">Github</a>.
+      </li>
+      <li class="info">
+        Created 1st May 2011.
+      </li>
+      <li class="info">
+        Last modified 9th September 2011.
+      </li>
+    </ul>
+    <noscript>This demonstration of animated HTML canvas requires Javascript. Please enable Javascript and reload this page to try again.</noscript>
+    <div id="main" class="js_only"></div>
+    <div id="circle_type" class="js_only">
+      <input type="radio" name="circle_type" id="stroke"> <label for="stroke">Wireframe</label>
+      <input type="radio" name="circle_type" id="fill"> <label for="fill">Filled</label>
+    </div>
+    <div id="footer">
+      <p class="js_only">Note: May run slowly when using Internet Explorer 8 or lower.</p>
+      <p>Please report any problems that you encounter.</p>
+    </div>
+    <div id="copyright">
+      <a href="http://www.aiham.net/">Aiham Hammami</a> &copy; 2011
+    </div>
+  </body>
+</html>
