@@ -353,8 +353,8 @@
   $(window.document).ready(function () {
 
     var petridish, stroke_input, fill_input, menu, circle_type_action,
-      pattern, name, button, about_button, report_button, pattern_setter;
-  
+      pattern, name, button, about_button, pattern_setter;
+
     $('.js_only').removeClass('js_only');
 
     petridish = new PetriDish($('#main'));
@@ -420,49 +420,7 @@
       }
       e.preventDefault();
     }).click();
-    
-    report_button = $('a.report_link');
-    report_button.click(function (e) {
-      e.preventDefault();
-      if ($('#report_box').length > 0) {
-        return;
-      }
-      $('#report_container').append(
-        $('<form>').hide().
-          attr('id', 'report_box').
-          submit(function (e) {
-            var report_details = $('#report_details').val();
-            e.preventDefault();
-            $('#report_close').click();
-            if (report_details.length > 0) {
-              $.ajax({
-                data: {details: report_details},
-                type: 'POST',
-                url: 'report.php'
-              });
-              $.notifyBar({
-                html: 'Thank you for reporting this problem. ' +
-                  'It will be investigated as soon as possible.',
-                close: true
-              });
-            }
-          }).
-          html(
-            '<p>Please describe the problem you encountered.</p>' +
-              '<div><textarea id="report_details"></textarea></div>' +
-              '<div><input type="submit" value="Report">' + 
-              '<p><a href="#" id="report_close">Close</a></p></div>'
-          )
-      );
-      $('#report_close').click(function (e) {
-        e.preventDefault();
-        $('#report_box').hide('foobar', function () {
-          $(this).remove();
-        });
-      });
-      $('#report_box').show('foobar');
-    });
-  
+
   });
 
 }(window));
